@@ -43,8 +43,7 @@ def test():
 
 @app.route('/hello')
 def hello():
-    temp = points[0]
-    return temp, 201
+    return points, 201
 	
 @app.route('/ml', methods=['POST'])
 def doML():
