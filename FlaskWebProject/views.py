@@ -43,9 +43,7 @@ def test():
 
 @app.route('/hello')
 def hello():
-	data = {}
-	data['key'] = 'value'
-    return json.dumps(data)
+    return  "my Hello, World!", 201
 	
 @app.route('/ml', methods=['POST'])
 def doML():
