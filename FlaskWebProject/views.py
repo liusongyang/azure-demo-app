@@ -43,11 +43,7 @@ def test():
 
 @app.route('/hello')
 def hello():
-	temp = {
-        'id':  1,
-        'temp': 55,
-        'done': True
-    }
+	
     return "my hello world", 201
 	
 @app.route('/ml', methods=['POST'])
