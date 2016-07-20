@@ -10,18 +10,6 @@ from slugify import slugify
 from FlaskWebProject import app
 from FlaskWebProject import model
 
-points = [
-    {
-        'time': 1,
-        'temp': 60,
-        'done': False
-    },
-    {
-        'id': 2,
-        'temp': 50,
-        'done': False
-    }
-]
 @app.route('/')
 @app.route('/home')
 def home():
@@ -55,12 +43,7 @@ def test():
 
 @app.route('/hello')
 def hello():
-	temp = {
-        'id': 1,
-        'temp': 50,
-        'done': True
-    }
-    return jsonify({'temp': temp}), 201
+    return "my Hello, World!", 201
 	
 @app.route('/ml', methods=['POST'])
 def doML():
