@@ -5,7 +5,7 @@ The flask application package.
 # import logging
 # from logging.handlers import FileHandler
 
-from flask import Flask
+from flask import Flask, jsonify
 app = Flask(__name__)
 
 app.debug = True
