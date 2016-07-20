@@ -43,7 +43,8 @@ def test():
 
 @app.route('/hello')
 def hello():
-    return "my Hello, World!"
+    temp = points[0]
+    return jsonify({'temp': temp}), 201
 	
 @app.route('/ml', methods=['POST'])
 def doML():
@@ -56,4 +57,4 @@ def doML():
     }
     points.append(temp)
     return jsonify({'temp': temp}), 201
-	
+
