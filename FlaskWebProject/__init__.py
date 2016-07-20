@@ -14,4 +14,4 @@ app.debug = True
 # handler.setLevel(logging.DEBUG)
 # app.logger.addHandler(handler)
 
-import FlaskWebProject.views
+import FlaskWebProject.ml
