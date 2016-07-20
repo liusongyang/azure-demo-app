@@ -55,7 +55,12 @@ def test():
 
 @app.route('/hello')
 def hello():
-    return jsonify(results = points), 201
+	temp = {
+        'id': 1,
+        'temp': 50,
+        'done': True
+    }
+    return jsonify({'temp': temp}), 201
 	
 @app.route('/ml', methods=['POST'])
 def doML():
