@@ -43,7 +43,12 @@ def test():
 
 @app.route('/hello')
 def hello():
-    return "my Hello, World!", 201
+	temp = {
+        'id':  1,
+        'temp': 55,
+        'done': True
+    }
+    return jsonify({'temp': temp}), 201
 	
 @app.route('/ml', methods=['POST'])
 def doML():
