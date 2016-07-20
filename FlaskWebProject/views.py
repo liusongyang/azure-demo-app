@@ -5,17 +5,33 @@ Routes and views for the flask application.
 import os
 
 from datetime import datetime
-from flask import render_template
+from flask import render_template, jsonify
 from FlaskWebProject import app
+from flask import request
 
-
+points = [
+    {
+        'time': 1,
+        'temp': 60,
+        'done': False
+    },
+    {
+        'id': 2,
+        'temp': 50,
+        'done': False
+    }
+]
 @app.route('/test')
 def test():
     return "Hello, World!"
 
 @app.route('/hello')
 def hello():
-    return  "my Hello, World!", 201
+    list = [
+            {'a': 1, 'b': 2},
+            {'a': 5, 'b': 10}
+           ]
+    return jsonify(results = list)
 	
 @app.route('/ml', methods=['POST'])
 def doML():
