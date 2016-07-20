@@ -39,4 +39,4 @@ def series(name):
 
 @app.route('/test')
 def test():
-    return str(os.environ)
+    return "Hello, World!"
