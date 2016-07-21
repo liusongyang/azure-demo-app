@@ -22,13 +22,12 @@ points = [
     }
 ]
 @app.route('/')
-def tset():
+@app.route('/home')
+def home():
     return "Liusong is saying hello to you from NW hackathon!"
-	
-@app.route('/test')
 
-@app.route('/hello')
-def hello():
+@app.route('/test')
+def test():
     list = [
             {'a': 1, 'b': 2},
             {'a': 5, 'b': 10}
