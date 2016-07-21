@@ -21,6 +21,10 @@ points = [
         'done': False
     }
 ]
+@app.route('/')
+def home():
+    return "Liusong is saying hello to you!"
+	
 @app.route('/test')
 def test():
     return "Hello, World!"
