@@ -34,6 +34,20 @@ def test():
            ]
     return jsonify(results = list)
 
+def df_to_json(y):
+    j = "["
+    for i in xrange(len(y)):
+        line=y.loc[i,:]
+        #item={"flag": line[0],"time": line[1],"temp":line[2]}
+        item='{\"'+str(col[0])+'\": ' +str(line[0])+', \"'+str(col[1])+'\": '+ str(line[1])+', \"'+str(col[2])+'\": '+str(line[2])+'}'
+        #j.append(item)
+        if i == 0:
+            j=j+item
+        else:
+            j = j + ", " + item
+                
+    j=j+']'
+    return j
 	
 @app.route('/ml', methods=['POST'])
 def doML():
