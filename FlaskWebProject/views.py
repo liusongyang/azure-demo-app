@@ -8,8 +8,8 @@ from datetime import datetime
 from flask import render_template, jsonify
 from FlaskWebProject import app
 from flask import request
-import pandas as pd
-import json
+from flask import json
+
 points = [
     {
         'time': 1,
