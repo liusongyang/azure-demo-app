@@ -9,7 +9,7 @@ from flask import render_template, jsonify
 from FlaskWebProject import app
 from flask import request
 from flask import json
-from flask import panda as pd
+from flask import pandas as pd
 
 points = [
     {
