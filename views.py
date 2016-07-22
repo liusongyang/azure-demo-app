@@ -9,7 +9,7 @@ from flask import render_template, jsonify
 from FlaskWebProject import app
 from flask import request
 from flask import json
-from flask import numpy as np
+import pandas as pd
 
 points = [
     {
@@ -67,8 +67,7 @@ def df_to_json(y):
             j = j + ", " + item
                 
     j=j+']'
-    return j
-	
+    return j	
 @app.route('/ml', methods=['POST'])
 def doML():
     if not request.json or not 'temp' in request.json:
